@@ -1,6 +1,6 @@
 <?php include __DIR__.'/layout/header.php' ?>
 
-            <div>
+            <div class="intro">
                 <h2> Bienvenue sur O'Quiz </h2>
                 <p>O'Quiz est une plateforme de quiz, vous trouverez ci-dessous l'ensemble des quiz disponible.</p>
                 <p>Pour une expérience optimale, n'hésitez pas à créer un compte afin de garder une trace de vos résultats !</p>
@@ -14,7 +14,7 @@
 
                <?php foreach($quizzes as $quizz): ?>
                    
-                    <div class="col-4">
+                    <div class="col-4 quiz-card">
                         <h3><?= $quizz->title ?></h3>
                         <h5><?= $quizz->description ?></h5>
                         <p>Author_name</p>

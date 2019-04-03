@@ -27,7 +27,7 @@
                     </li>
                 </ul>
 
-                <ul>
+                <ul class="d-flex">
                     <li>
                         <a href="<?= route('home'); ?>">
                             <i></i>
