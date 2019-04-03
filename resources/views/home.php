@@ -1,5 +1,5 @@
 <?php include __DIR__.'/layout/header.php' ?>
-
+        
             <div class="intro">
                 <h2> Bienvenue sur O'Quiz </h2>
                 <p>O'Quiz est une plateforme de quiz, vous trouverez ci-dessous l'ensemble des quiz disponible.</p>
@@ -21,4 +21,5 @@
 
             </div>
         </main>
+</div>
  <?php require __DIR__.'/layout/footer.php'; ?>

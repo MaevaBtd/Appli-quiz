@@ -1,13 +1,21 @@
+@keyframes nyan {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+
 body {
     font-family: 'Monoton', cursive;
     background-color: #36A097;
     box-sizing: border-box;
     background-image: url(https://media.giphy.com/media/RE5iREBNhI0Ok/giphy.gif);  
     cursor: url('http://rainbow.arch.scriptmania.com/scripts/bluebub.gif'), auto;
-
-
-    /* HAHA #1A5276 */
+   
 }
+  
 
 a {
     color: inherit;
@@ -73,7 +81,7 @@ a {
     width: 900px;
     margin: auto;
     background-color: aliceblue;
-    opacity: 0.7;
+    opacity: 0.8;
     padding: 1.25rem;
     margin-top: 0.625rem;
     border: 2px solid black;
@@ -136,4 +144,37 @@ a {
     padding: 0.325rem 0;
     cursor: pointer;
 }
+
+.nyan {
+
+    background-image: url(https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    animation-timing-function: ease-in-out;
+    animation-name: nyan;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+}
+
+.nyan:hover {
+    transform: scale(1.5);
+    transition: .5s;
+}
+
+
+.rick-roll {
+    display: flex; 
+    justify-content: center;
+}
+
+.ricky:hover {
+    border: 10px solid rgb(235, 14, 216);    
+}
+
+
 

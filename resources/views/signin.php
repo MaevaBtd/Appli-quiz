@@ -12,7 +12,9 @@
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Never Gonna Give You Up</button>
 </form>
-
+<div class="rick-roll">
+  <img src="https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif" class="ricky">
+</div>
 <?php include __DIR__.'/layout/footer.php' ?>

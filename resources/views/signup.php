@@ -51,7 +51,9 @@
       </div>
     </div>
   </div>
-
 </form>
+  <div class="trololo">
+      <img src="https://media.giphy.com/media/3x1ZGSBZlwXcY/giphy.gif" alt="troll" class="trolo-img">
+  </div>
 
 <?php include __DIR__.'/layout/footer.php' ?>
