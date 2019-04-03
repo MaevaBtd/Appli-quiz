@@ -1,9 +1,27 @@
 body {
-    font-family: Monospace, sans-serif;
+    font-family: 'Monoton', cursive;
     background-color: #36A097;
     box-sizing: border-box;
+    background-image: url(https://media.giphy.com/media/RE5iREBNhI0Ok/giphy.gif);  
+    cursor: url('http://rainbow.arch.scriptmania.com/scripts/bluebub.gif'), auto;
+
 
     /* HAHA #1A5276 */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+    cursor: inherit;
+}
+
+a:hover {
+    background-color: red;
+    transform: scale(1.5) rotate(4turn);
+    /* overflow: hidden; */
+    text-decoration: none;
+    box-shadow: 0 0 10px yellow;
 }
 
 nav {
@@ -37,11 +55,11 @@ p {
 }
 
 a {
-    color: yellowgreen;
+    color: darkmagenta;
 }
 
 .intro {
-    
+    padding-bottom: 2em;
 }
 
 .quiz-card {
@@ -54,11 +72,12 @@ a {
 .container {
     width: 900px;
     margin: auto;
-    background-color: white;
+    background-color: aliceblue;
+    opacity: 0.7;
     padding: 1.25rem;
     margin-top: 0.625rem;
     border: 2px solid black;
-    box-shadow: 5px 5px 10px rgb(65, 65, 65);
+    box-shadow: 5px 5px 10px lightblue;
     border-radius: 10px;
 }
 
@@ -117,3 +136,4 @@ a {
     padding: 0.325rem 0;
     cursor: pointer;
 }
+

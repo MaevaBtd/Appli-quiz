@@ -6,19 +6,16 @@
                 <p>Pour une expérience optimale, n'hésitez pas à créer un compte afin de garder une trace de vos résultats !</p>
             </div>
 
-            	
-
-
-
             <div class="row">
 
-               <?php foreach($quizzes as $quizz): ?>
-                   
-                    <div class="col-4 quiz-card">
-                        <h3><?= $quizz->title ?></h3>
-                        <h5><?= $quizz->description ?></h5>
-                        <p>Author_name</p>
-                    </div>
+               <?php foreach($quizzes as $quiz): ?>
+                    <a href="#" class="col-4 quiz-card">
+                    
+                        <h3><?= $quiz->title ?></h3>
+                        <h5><?= $quiz->description ?></h5>
+                        <p><?= $users->firstWhere('id', $quiz->app_users_id)->firstname .' '. $users->firstWhere('id', $quiz->app_users_id)->lastname?></p>
+                       
+                    </a>
 
                <?php endforeach ?>
 

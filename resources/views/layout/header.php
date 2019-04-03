@@ -11,6 +11,7 @@
         
         <!-- Really beautiful CSS -->
         <link href="<?= url('assets/css/style.css') ?>"  rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 
         <title>O'Quiz</title>
     </head>
