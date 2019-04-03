@@ -20,8 +20,6 @@ $router->get('/', [
     'uses' => 'MainController@home'
 ]);
 
-
-
 $router->get('/quiz/{id}', [
     'as' => 'quiz',
     'uses' => 'QuizController@quiz'
@@ -76,7 +74,7 @@ $router->get('/tags/[id]/quiz', [
 # Routes
 
 // | URL | Titre | Description de la page | Méthode HTTP | Controller | Méthode | commentaire |
-// |--|--|--|--|--|--|--|
+// // // |--|--|--|--|--|--|
 // | `/` | Accueil | liste des quiz | GET | MainController | home |  |
 // | `/quiz/[id]` | Quiz – Titre du quiz | quiz avec ses réponses | GET | QuizController | quiz |  |
 // | `/quiz/[id]` | - | traitement du formulaire du quiz soumis et affichage des bonnes réponses, scores, etc. | POST | QuizController | quizPost |  |
