@@ -15,10 +15,14 @@
 //     return $router->app->version();
 // });
 
+////////// MAIN CONTROLLER //////////
+
 $router->get('/', [
     'as' => 'home', 
     'uses' => 'MainController@home'
 ]);
+
+////////// QUIZ CONTROLLER //////////
 
 $router->get('/quiz/{id}', [
     'as' => 'quiz',
@@ -30,42 +34,46 @@ $router->post('/quiz/{id}',[
     'uses' => 'QuizController@quizPost'
 ]);
 
+////////// USER CONTROLLER //////////
 
 $router->get('/signup', [
-    'as' => 'UserController', 
+    'as' => 'signup', 
     'uses' => 'UserController@signup'
 ]);
 
 $router->post('/signup', [
-    'as' => 'UserController', 
+    'as' => 'signupPost', 
     'uses' => 'UserController@signupPost'
 ]);
 
 $router->get('/signin', [
     'as' => 'signin',
-    'uses', 'UserController@signin'
+    'uses' => 'UserController@signin'
 ]);
 
 $router->post('/signin', [
-    'as' => 'UserController', 
+    'as' => 'signinPost', 
     'uses' => 'UserController@signinPost'
 ]);
 
 $router->get('/logout', [
-    'as' => 'UserController',
+    'as' => 'logout',
     'uses' => 'UserController@logout'        
 ]);
 $router->post('/account', [
-    'as' => 'UserController', 
+    'as' => 'profile', 
     'uses' => 'UserController@profile'
 ]);
+
+////////// TAG CONTROLLER //////////
+
 $router->get('/tags', [
-    'as' => 'TagController',
+    'as' => 'tags',
     'uses' => 'TagController@tags'        
 ]);
 
 $router->get('/tags/[id]/quiz', [
-    'as' => 'UserController', 
+    'as' => 'quiz', 
     'uses' => 'TagController@quiz'
 ]);
 
