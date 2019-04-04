@@ -3,7 +3,7 @@
         left: 0;
     }
     to {
-        left: 100%;
+        left: calc(100% - 150px);
     }
 }
 
@@ -150,12 +150,12 @@ a {
     background-image: url(https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif);
     background-size: contain;
     background-repeat: no-repeat;
+    height: 95px;
+    width: 150px;
     border-radius: 50%;
-    height: 100px;
-    width: 200px;
     position: absolute;
     top: 50%;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in;
     animation-name: nyan;
     animation-duration: 7.5s;
     animation-iteration-count: infinite;
