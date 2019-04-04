@@ -39,7 +39,10 @@
     <label for="exampleInputPassword1">Confirmez votre mot de passe</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
-  <button class="btn btn-primary" type="submit">Trololo</button>
+  <button class="btn btn-primary" type="submit" onmouseenter="playAudio()" onmouseout="stopAudio()">Trololo</button>
+  <audio id="audioID">
+  <source src="https://ia800700.us.archive.org/27/items/TrololoRingtone/Trololo.mp3" type="audio/mpeg">
+</audio>
  <div class="form-group">
     <div class="form-check">
       <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>

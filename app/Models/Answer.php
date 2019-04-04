@@ -3,7 +3,13 @@
 namespace App\Models; 
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Question;
 
 class Answer extends Model {
-    protected $table = 'answers';
+
+    public function question() {
+
+        return $this->belongsTo(Question::class, 'answers_id');
+    }
+
 }
