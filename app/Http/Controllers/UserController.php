@@ -29,43 +29,43 @@ class UserController extends Controller {
         // die;
 
         // $input = $request->only(['firstname', 'lastname', 'email', 'password']);
-        $arrayError = [];
+        // $arrayError = [];
 
-        if (empty($input['email'])){
-            $arrayError[] = User::NO_EMAIL;
-        }
+        // if (empty($input['email'])){
+        //     $arrayError[] = User::NO_EMAIL;
+        // }
 
-        elseif (empty($input['firstname'])){
-            $arrayError[] = User::NO_FIRSTNAME;
-        }
+        // elseif (empty($input['firstname'])){
+        //     $arrayError[] = User::NO_FIRSTNAME;
+        // }
 
-        elseif (empty($input['lastname'])){
-            $arrayError[] = User::NO_LASTNAME;
+        // elseif (empty($input['lastname'])){
+        //     $arrayError[] = User::NO_LASTNAME;
         
-        }
+        // }
 
-        elseif (empty($input['password'])){
-            $arrayError[] = User::NO_PASSWORD;
-        }
+        // elseif (empty($input['password'])){
+        //     $arrayError[] = User::NO_PASSWORD;
+        // }
 
-        dump($arrayError);
-        die;
+        // dump($arrayError);
+        // die;
 
         // elseif (array_sum($arrayError) == 0){
             
-        //     User::insert([
+             User::insert([
                 
-        //         'email' => $input['email'], 
-        //         'firstname' => $input['firstname'], 
-        //         'lastname' => $input['lastname'], 
-        //         'password' => Hash::make($input['password'])
-        //         ]);
-        //         // Hash::check(password)
+                 'email' => $input['email'], 
+                 'firstname' => $input['firstname'], 
+                 'lastname' => $input['lastname'], 
+                 'password' => Hash::make($input['password'])
+                 ]);
+                  //Hash::check(password)
                 
-        //         return redirect()->route('signin');
+                 return redirect()->route('signin');
                 
                 
-        //     }
+             
     }
         
             

@@ -1,8 +1,8 @@
 <?php include __DIR__.'/layout/header.php' ?>
         
             <div class="intro">
-                <h2> Bienvenue sur O'Quiz </h2>
-                <p>O'Quiz est une plateforme de quiz, vous trouverez ci-dessous l'ensemble des quiz disponible.</p>
+                <h2> <?= $tag->name ?></h2>
+                <p>O'Quiz est une plateforme de quiz, vous trouverez ci-dessous l'ensemble des quiz disponible pour le sujet <?= $tag->name ?> .</p>
                 <p>Pour une expérience optimale, n'hésitez pas à créer un compte afin de garder une trace de vos résultats !</p>
             </div>
 
@@ -21,7 +21,7 @@
                     
                         <h3><?= $quiz->title ?></h3>
                         <h5><?= $quiz->description ?></h5>
-                        <p><?= $users->firstWhere('id', $quiz->app_users_id)->firstname .' '. $users->firstWhere('id', $quiz->app_users_id)->lastname?></p>
+                        <p><?= $quiz->author->firstname.' '.$quiz->author->lastname;?></p>
                        
                     </a>
 
