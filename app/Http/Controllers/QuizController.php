@@ -11,7 +11,7 @@ use \DB;
 class QuizController extends Controller {
 
     public function quiz(){
-
+        return view('quiz');
     }
 
     public function quizPost(){

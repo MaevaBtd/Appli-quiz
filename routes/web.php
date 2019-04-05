@@ -30,7 +30,7 @@ $router->get('/quiz/{id}', [
 ]);
 
 $router->post('/quiz/{id}',[
-    'as' => 'quizPost',
+    'as' => 'quiz-post',
     'uses' => 'QuizController@quizPost'
 ]);
 
@@ -42,7 +42,7 @@ $router->get('/signup', [
 ]);
 
 $router->post('/signup', [
-    'as' => 'signupPost', 
+    'as' => 'signup', 
     'uses' => 'UserController@signupPost'
 ]);
 
@@ -52,7 +52,7 @@ $router->get('/signin', [
 ]);
 
 $router->post('/signin', [
-    'as' => 'signinPost', 
+    'as' => 'signin', 
     'uses' => 'UserController@signinPost'
 ]);
 

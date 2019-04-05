@@ -14,7 +14,7 @@ class UserController extends Controller {
         return view('signup');            
     }
 
-    public function signupPost() {
+    public function signupPost(Request $request) {
         
     }
 

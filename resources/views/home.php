@@ -9,8 +9,8 @@
             <div class="row">
 
                <?php foreach($quizzes as $quiz): ?>
-                    <a href="#" class="col-4 quiz-card">
-                    
+                    <a href="<?= route('quiz'); ?>" class="col-4 quiz-card">
+
                         <h3><?= $quiz->title ?></h3>
                         <h5><?= $quiz->description ?></h5>
                         <p><?= $users->firstWhere('id', $quiz->app_users_id)->firstname .' '. $users->firstWhere('id', $quiz->app_users_id)->lastname?></p>
