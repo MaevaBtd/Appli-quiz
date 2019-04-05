@@ -20,8 +20,9 @@ var nyan = {
 
     handleLeave: function(event) {
         console.log('Leave ok');
+
         while (nyan.element.firstChild) {
-            nyan.element.removeChild(nyan.element.firstChild);
+             nyan.element.removeChild(nyan.element.firstChild);
         }
     }
 }

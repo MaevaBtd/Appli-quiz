@@ -23,7 +23,7 @@
                 <ul>
                     <li>
                         <a href="<?= route('home'); ?>">
-                        <h1>O'Quiz</h1>
+                        <h1><img src="https://cdn2.scratch.mit.edu/get_image/gallery/1204086_200x130.png"></h1>
                         </a>
                     </li>
                 </ul>

@@ -22,4 +22,5 @@ class MainController extends Controller {
             'users' => $users
         ]);
     }
+
 }

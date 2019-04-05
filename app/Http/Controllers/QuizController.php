@@ -29,7 +29,6 @@ class QuizController extends Controller {
         }
         // Récupère les tags pour le quiz
         $tags = $quiz->tags;
-        dump($tags);
 
         // Méthode pour donner les datas à la vue
         return view('quiz', [

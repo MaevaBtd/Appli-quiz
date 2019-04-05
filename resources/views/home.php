@@ -9,7 +9,10 @@
             <div class="row">
 
                <?php foreach($quizzes as $quiz): ?>
-                    <a href="<?=route('quiz', ['id' => $quiz->id]);?>" class="col-4 quiz-card">
+                    <a href="<?=route('quiz', ['id' => $quiz->id]);?>" class="col-4 quiz-card" onmouseenter="playAudio()">
+                    <audio id="audioID">
+                    <source src="https://www.cjoint.com/doc/17_04/GDBo22CpPLB_Denis-Brogniart-AH.mp3">
+                    </audio>
                 
                     
                         <h3><?= $quiz->title ?></h3>
