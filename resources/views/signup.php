@@ -1,4 +1,12 @@
-<?php include __DIR__.'/layout/header.php' ?>
+<?php include __DIR__.'/layout/header.php';
+
+if(isset($errors)) {
+  foreach($errors as $value) {
+    echo $value.'</br>';
+  }
+}
+
+?>
 <form action="<?=route('signupPost')?>" method="POST">
   <div class="form-row">
     <div class="col-md-4 mb-3">
