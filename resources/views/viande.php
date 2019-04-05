@@ -12,16 +12,16 @@
 
             <div class="row">
 
-               <?php foreach($quizzes as $quiz): ?>
+               <?php foreach($tag->quizzes as $quiz): ?>
                     <a href="<?=route('quiz', ['id' => $quiz->id]);?>" class="col-4 quiz-card" onmouseenter="playAudio()">
                     <audio id="audioID">
-                    <source src="https://www.cjoint.com/doc/17_04/GDBo22CpPLB_Denis-Brogniart-AH.mp3">
+                    <source src="http://www.thequiz-addict.dx.am/music/viande2.wav">
                     </audio>
                 
                     
                         <h3><?= $quiz->title ?></h3>
                         <h5><?= $quiz->description ?></h5>
-                        <p><?= $quiz->firstname .' '. $quiz->lastname?></p>
+                        <p><?= $users->firstWhere('id', $quiz->app_users_id)->firstname .' '. $users->firstWhere('id', $quiz->app_users_id)->lastname?></p>
                        
                     </a>
 
@@ -31,4 +31,3 @@
         </main>
     </div>
 <?php require __DIR__.'/layout/footer.php'; ?>
-

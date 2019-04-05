@@ -50,5 +50,9 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="<?= route('tags'); ?>">Sujets</a>
+                    </li>
+
                 </ul>
             </nav>

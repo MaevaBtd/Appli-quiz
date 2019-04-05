@@ -3,7 +3,7 @@
 
 <div>
     <h2> <?= $quiz->title ?>
-        <span><?= count($questions) ?>questions</span>
+        <span><?= count($quiz->questions) ?>questions</span>
     </h2>
 </div>
 
@@ -14,12 +14,12 @@
 </div>
 
 <div>
-    <p><?= $author->firstname.' '.$author->lastname; ?></p>
+    <p><?= $quiz->author->firstname.' '.$quiz->author->lastname; ?></p>
 </div>
 
 <div>
     <ul>
-    <?php foreach($tags as $tag): ?>
+    <?php foreach($quiz->tags as $tag): ?>
         <li><?= $tag->name ?></li>
     <?php endforeach ?>
     </ul>
@@ -28,26 +28,16 @@
 <div class="row">
 
 
-    <?php foreach($questions as $question) : ?>
+    <?php foreach($quiz->questions as $question) : ?>
     <div class="col question col-4">
 
-        <span class="level level--<?= $levels->firstWhere('id', $question->levels_id)->id ?>"><?= $levels->firstWhere('id', $question->levels_id)->name ?></span>
+        <span class="level level--<?= $question->level->id ?>"><?= $question->level->name ?> </span>
+        
 
         <div class="question__question">
             <?= $question->question ?>
         </div>
-        <div>
-
-            <ul>
-                <?php foreach($answers as $answer): ?>
-                    <?php foreach($answer as $currentDescription) : ?>
-                        <?php if($currentDescription->questions_id == $question->id) : ?>
-                            <li><?= $currentDescription->description ?></li>
-                        <?php endif ?>
-                    <?php endforeach ?>
-                <?php endforeach ?>
-            </ul>
-        </div>
+       
     </div>
     <?php endforeach; ?>
 
@@ -57,5 +47,16 @@
 
 </div>
 </main>
+
+<template>
+<div>
+
+<ul>
+    <?php foreach($question->answers as $answer): ?>  
+                <li><?=$answer->description ; ?></li>
+    <?php endforeach ?>
+</ul>
+</div>
+</template>
 
 <?php require __DIR__.'/layout/footer.php' ?>
