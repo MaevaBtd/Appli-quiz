@@ -28,11 +28,18 @@ var nyan = {
         }
     },
 
+
     handleClick: function(event){
         var link = document.createElement('a'); 
         link.setAttribute('href', 'https://www.youtube.com/watch?v=fyuNidSrVik');
         link.appendChild(nyan.source);
     }
+
+    // handleClickOnNyan: function(event){
+    //     var x = document.createElement
+    //     nyan.element.addEventListener("click", handleLeave);
+   // }
+
 }
 
 document.addEventListener('DOMContentLoaded', nyan.init)
