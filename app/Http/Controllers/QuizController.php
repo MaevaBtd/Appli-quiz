@@ -20,7 +20,7 @@ class QuizController extends Controller {
         ]);
     }
 
-    public function quizPost(){
-
+    public function quizPost(Request $request){
+        $goodAnswer = Answer::where('answer_id')
     }
 }

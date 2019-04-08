@@ -1,7 +1,7 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
+|-------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
 |
@@ -60,7 +60,9 @@ $router->get('/logout', [
     'as' => 'logout',
     'uses' => 'UserController@logout'        
 ]);
-$router->post('/account', [
+
+
+$router->get('/account', [
     'as' => 'profile', 
     'uses' => 'UserController@profile'
 ]);
@@ -76,6 +78,7 @@ $router->get('/tags/{id}/quiz', [
     'as' => 'quiz-tag', 
     'uses' => 'TagController@quiz'
 ]);
+
 
 
 

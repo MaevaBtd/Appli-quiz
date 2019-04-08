@@ -19,44 +19,67 @@
 
 <div>
     <ul>
-    <?php foreach($quiz->tags as $tag): ?>
+        <?php foreach($quiz->tags as $tag): ?>
         <li><?= $tag->name ?></li>
-    <?php endforeach ?>
+        <?php endforeach ?>
     </ul>
 </div>
 
-<div class="row">
+<form action="<?= route('quizPost') ?>" method="POST">
+
+    <div class="row">
+        <?php foreach($quiz->questions as $question) : ?>
+        <div class="col question col-4">
+
+            <span class="level level--<?= $question->level->id ?>"><?= $question->level->name ?></span>
 
 
-    <?php foreach($quiz->questions as $question) : ?>
-    <div class="col question col-4">
+            <div class="question__question">
+                <?= $question->question ?>
+            </div>
 
-        <span class="level level--<?= $question->level->id ?>"><?= $question->level->name ?> </span>
-        
+            <?php if(\App\Utils\UserSession::isConnected()) : ?>
+            <div class="question__choices">
+                <?php foreach($question->answers as $answer) : ?>
 
-        <div class="question__question">
-            <?= $question->question ?>
+                <div>
+                    <input type="radio" name="exampleRadios<?= $question->id ?>" id="exampleRadios" value="option">
+                    <label for="exampleRadios">
+                        <?= $answer->description ?>
+                    </label>
+                </div>
+
+                <!-- https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/radio -->
+
+                <?php endforeach ?>
+            </div>
+            <?php endif ?>
+
         </div>
-       
+        <?php endforeach; ?>
+
+        <?php if(\App\Utils\UserSession::isConnected()):?>
+        <div>
+            <input class="btn" type="submit" onmouseenter="playAudio()" onmouseout="stopAudio() value=" OK" />
+        </div>
+        <audio id="audioID">
+            <source src="http://www.thequiz-addict.dx.am/music/kamoulox.wav" type="audio/mpeg">
+        </audio>
+        <?php endif ?>
+
     </div>
-    <?php endforeach; ?>
-
-
-
-
-
-</div>
+</form>
 </main>
 
 <template>
-<div>
+    <div>
 
-<ul>
-    <?php foreach($question->answers as $answer): ?>  
-                <li><?=$answer->description ; ?></li>
-    <?php endforeach ?>
-</ul>
-</div>
+        <ul>
+            <?php foreach($question->answers as $answer): ?>
+            <li><?=$answer->description ; ?></li>
+            <?php endforeach ?>
+        </ul>
+    </div>
 </template>
 
-<?php require __DIR__.'/layout/footer.php' ?>
+<?php require __DIR__.'/layout/footer.php' ?><div class="row">
