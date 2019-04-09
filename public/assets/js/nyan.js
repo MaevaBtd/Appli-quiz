@@ -2,7 +2,8 @@ var nyan = {
     init: function() {
         console.log('nyan ready');
         nyan.element.addEventListener('mouseover', nyan.handleOver);
-        nyan.element.addEventListener('mouseleave', nyan.handleLeave);    
+        nyan.element.addEventListener('mouseleave', nyan.handleLeave);   
+        nyan.element.addEventListener('click', nyan.handleClick) ;
     },
 
     element: document.querySelector('.nyan'),
@@ -16,6 +17,7 @@ var nyan = {
         audio.appendChild(source);
         nyan.element.appendChild(audio);
         audio.play();
+        
     },
 
     handleLeave: function(event) {
@@ -26,10 +28,18 @@ var nyan = {
         }
     },
 
+
+    handleClick: function(event){
+        var link = document.createElement('a'); 
+        link.setAttribute('href', 'https://www.youtube.com/watch?v=fyuNidSrVik');
+        link.appendChild(nyan.source);
+    }
+
     // handleClickOnNyan: function(event){
     //     var x = document.createElement
     //     nyan.element.addEventListener("click", handleLeave);
    // }
+
 }
 
 document.addEventListener('DOMContentLoaded', nyan.init)
