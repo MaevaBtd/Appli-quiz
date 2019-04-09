@@ -12,4 +12,9 @@ class Answer extends Model {
         return $this->belongsTo(Question::class, 'answers_id');
     }
 
+
+    public function goodAnswer() {
+        return $this->hasOne(Question::class);
+    }
+
 }

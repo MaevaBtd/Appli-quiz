@@ -24,8 +24,13 @@
         <?php endforeach ?>
     </ul>
 </div>
+<?php if(!empty($score)) : ?>
+<div class="alert-info">
+<p>Votre score est de <?= $score ?> points</p>
 
-<form action="<?= route('quizPost') ?>" method="POST">
+</div>
+<?php endif ?>
+<form action="<?= route('quizPost', ['id' => $quiz->id]) ?>" method="POST">
 
     <div class="row">
         <?php foreach($quiz->questions as $question) : ?>
@@ -42,12 +47,19 @@
             <div class="question__choices">
                 <?php foreach($question->answers as $answer) : ?>
 
+
                 <div>
-                    <input type="radio" name="exampleRadios<?= $question->id ?>" id="exampleRadios" value="option">
-                    <label for="exampleRadios">
+                 <input type="radio" name="<?= $question->id ?>" id="<?= $question->id ?>" value="<?=$answer->id ?>">
+                    <label for="<?= $question->id ?>" >
                         <?= $answer->description ?>
                     </label>
                 </div>
+
+            
+                
+
+                
+                
 
                 <!-- https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/radio -->
 

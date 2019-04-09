@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -61,7 +61,8 @@
                     </li>
                     
                     <li>
-                        <a href="<?= route('logout'); ?>">Deconnexion</a>
+                        <a href="<?= route('logout'); ?>">Deconnexion</a> 
+                        
                     </li>
                     <?php endif; ?> 
 

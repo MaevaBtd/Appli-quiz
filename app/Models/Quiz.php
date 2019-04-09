@@ -23,4 +23,6 @@ class Quiz extends Model {
    public function author() {
        return $this->belongsTo(User::class, 'app_users_id');
    }
+
+  
 }

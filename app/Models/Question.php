@@ -16,4 +16,7 @@ class Question extends Model {
         return $this->belongsTo(Level::class, 'levels_id');
     }
 
+    public function goodAnswer () {
+        return $this->hasOne(Answer::class, 'id', 'answers_id');
+    }
 }
